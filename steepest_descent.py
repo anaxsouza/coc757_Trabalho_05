@@ -19,13 +19,12 @@ delta_0 = delta
 while i < i_max and delta > (epsilon ** 2)*delta_0:
     q = A@r
     alpha = delta/(r.T@q)
-    x = x + alpha@r
+    x = x + r*alpha
     if i % 50 == 0:
         r = b - A@x
     else:
-        r = r - alpha*q
+        r = r - q*alpha
     delta = r.T@r
     i += 1
 
-print(x)
-
+print(r)
