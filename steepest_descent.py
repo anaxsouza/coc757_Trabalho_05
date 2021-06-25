@@ -5,13 +5,12 @@ A = mmread('/home/anaxsouza/Documents/GitHub/coc757_Trabalho_05/bcsstk19.mtx').t
 
 i = 0
 i_max = 5000
-epsilon = .001
+epsilon = .01
 
 b = np.zeros((817, 1))
 x = np.ones((817, 1))
 
 r = b - A@x
-z = A@x
 
 delta = r.T@r
 delta_0 = delta
@@ -26,5 +25,4 @@ while i < i_max and delta > (epsilon ** 2)*delta_0:
         r = r - q*alpha
     delta = r.T@r
     i += 1
-
-print(r)
+    print(r)    
