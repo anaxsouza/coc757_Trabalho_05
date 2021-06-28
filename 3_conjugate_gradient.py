@@ -8,7 +8,7 @@ def is_pos_def(x):
 def check_symmetric(x, tol=1e-8):
     return np.all(np.abs(x-x.T) < tol)
 
-A = mmread('/home/anaxsouza/Documents/GitHub/coc757_Trabalho_05/bcsstk15.mtx').todense()
+A = mmread('/home/anaxsouza/Documents/GitHub/coc757_Trabalho_05/bcsstk16.mtx').todense()
 b = np.zeros((A.shape[0], 1))
 x = np.ones((A.shape[0], 1))
 i_max = 20000

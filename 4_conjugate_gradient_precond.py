@@ -14,7 +14,7 @@ def precon(A):
         M_inv[i,i] = 1.0 / A[i,i]    
     return M_inv
 
-A = mmread('/home/anaxsouza/Documents/GitHub/coc757_Trabalho_05/bcsstk15.mtx').todense()
+A = mmread('/home/anaxsouza/Documents/GitHub/coc757_Trabalho_05/bcsstk16.mtx').todense()
 b = np.ones((A.shape[0], 1))
 x = np.ones((A.shape[0], 1))
 M_inv = precon(A)
